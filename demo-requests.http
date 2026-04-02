@@ -1,0 +1,55 @@
+@baseUrl = http://localhost:8080
+
+### Get all characters
+GET {{baseUrl}}/characters
+
+### Get character by ID
+GET {{baseUrl}}/characters/1
+
+### Get characters by category
+GET {{baseUrl}}/characters/category/Hero
+
+### Search by partial name
+GET {{baseUrl}}/characters/search?name=nar
+
+### Add a new character
+POST {{baseUrl}}/characters
+Content-Type: application/json
+
+{
+  "name": "Satoru Gojo",
+  "description": "A powerful sorcerer and teacher from Jujutsu High.",
+  "series": "Jujutsu Kaisen",
+  "category": "Hero",
+  "signatureAbility": "Limitless"
+}
+
+### Update an existing character
+PUT {{baseUrl}}/characters/1
+Content-Type: application/json
+
+{
+  "name": "Ken Kaneki",
+  "description": "A half-ghoul trying to protect people from both worlds.",
+  "series": "Tokyo Ghoul",
+  "category": "Anti-Hero",
+  "signatureAbility": "Kakuja"
+}
+
+### Delete a character
+DELETE {{baseUrl}}/characters/6
+
+### Error case: missing required fields
+POST {{baseUrl}}/characters
+Content-Type: application/json
+
+{
+  "name": "",
+  "description": "",
+  "series": "Unknown",
+  "category": "",
+  "signatureAbility": ""
+}
+
+### Error case: invalid ID
+GET {{baseUrl}}/characters/999

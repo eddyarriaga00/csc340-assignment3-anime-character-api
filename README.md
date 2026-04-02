@@ -95,10 +95,6 @@ Each character includes these fields:
 - URL: `/characters/search?name=substring`
 - Example: `/characters/search?name=nar`
 
-## Demo Video
-
-The OneDrive demo link should be added here after recording the demo.
-
 ## Notes
 
 - The application seeds five starter anime characters automatically the first time the database is empty.

@@ -18,7 +18,7 @@ import com.csc340.characterapi.model.AnimeCharacter;
 import com.csc340.characterapi.service.AnimeCharacterService;
 
 @RestController
-@RequestMapping("/characters")
+@RequestMapping("/api/characters")
 public class AnimeCharacterController {
 
     private final AnimeCharacterService animeCharacterService;
